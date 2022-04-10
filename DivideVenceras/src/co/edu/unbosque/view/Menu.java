@@ -5,12 +5,28 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import co.edu.unbosque.controller.Controller;
-
+/**
+ * Clase donde se crea la interfaz de la Ventana de menu del proyecto.
+ * Extienede de la interface JFrame para crear los elementos de la
+ * interfaz
+ * 
+ * @author Santiago Flórez
+ * @author Jorge Garcia
+ *
+ */
 public class Menu extends JFrame{
-	
+	/**
+	 * Atributo de tipo JCheckBox para crear el check para elegir el metodo a usar
+	 */
 	private JButton[] botones = new JButton[3];
+	/**
+	 * Atributo de tipo JLabel para crear los textos de informacion
+	 */
 	private JLabel titulo = new JLabel();
 	
+	/**
+	 * Contructor de la clase donde se le dan los parametros a la ventana
+	 */
 	public Menu() {
 		setTitle("Menu");
 		setSize(409, 258);
@@ -22,6 +38,9 @@ public class Menu extends JFrame{
 		setVisible(true);
 	}
 	
+	/**
+	 * Metodo que crea cada objeto con sus respectivos valores
+	 */
 	public void initComponent() {
 		titulo.setText("Divide y Venceras");
 		titulo.setBounds(145, 20, 119, 21);

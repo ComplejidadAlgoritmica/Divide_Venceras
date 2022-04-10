@@ -7,16 +7,44 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import co.edu.unbosque.controller.Controller;
-
+/**
+ * Clase donde se crea la interfaz de la Ventana de la multiplicacion de dos
+ * matrices. Extienede de la interface JFrame para crear los elementos de la
+ * interfaz
+ * 
+ * @author Santiago Flórez
+ * @author Jorge Garcia
+ *
+ */
 public class VentanaM extends JFrame{
-	
+	/**
+	 * Atributo de tipo JTextField para crear las entradas de texto de la primer matriz
+	 */
 	private JTextField[] matriz1 = new JTextField[4];
+	/**
+	 * Atributo de tipo JTextField para crear las entradas de texto de la segunda matriz
+	 */
 	private JTextField[] matriz2 = new JTextField[4];
-	private JTextField[] matrizR = new JTextField[4]; 
+	/**
+	 * Atributo de tipo JTextField para crear las entradas de texto de la matriz resultante
+	 */
+	private JTextField[] matrizR = new JTextField[4];
+	/**
+	 * Atributo de tipo JButton para crear los botones
+	 */
 	private JButton[] botones = new JButton[2];
+	/**
+	 * Atributo de tipo JCheckBox para crear el check para elegir el metodo a usar
+	 */
 	private JCheckBox d_v;
+	/**
+	 * Atributo de tipo JLabel para crear los textos de informacion
+	 */
 	private JLabel[] textos = new JLabel[3];
 	
+	/**
+	 * Contructor de la clase donde se le dan los parametros a la ventana
+	 */
 	public VentanaM() {
 		setTitle("Multiplicacion Matriz");
 		setSize(310, 385);
@@ -27,6 +55,9 @@ public class VentanaM extends JFrame{
 		setLocationRelativeTo(null);
 	}
 	
+	/**
+	 * Metodo que crea cada objeto con sus respectivos valores
+	 */
 	public void initComponent() {
 		matriz1[0] = new JTextField();
 		matriz1[0].setBounds(6, 29, 26, 27);
@@ -98,43 +129,48 @@ public class VentanaM extends JFrame{
 		getContentPane().add(botones[1]);
 	}
 
+	/**
+	 * Getter de los campos de entrada de texto
+	 * 
+	 * @return un arreglo con cada entrada texto
+	 */
 	public JTextField[] getMatriz1() {
 		return matriz1;
 	}
 
-	public void setMatriz1(JTextField[] matriz1) {
-		this.matriz1 = matriz1;
-	}
-
+	/**
+	 * Getter de los campos de entrada de texto
+	 * 
+	 * @return un arreglo con cada entrada texto
+	 */
 	public JTextField[] getMatriz2() {
 		return matriz2;
 	}
 
-	public void setMatriz2(JTextField[] matriz2) {
-		this.matriz2 = matriz2;
-	}
-
+	/**
+	 * Getter de los campos de entrada de texto
+	 * 
+	 * @return un arreglo con cada entrada texto
+	 */
 	public JTextField[] getMatrizR() {
 		return matrizR;
 	}
 
-	public void setMatrizR(JTextField[] matrizR) {
-		this.matrizR = matrizR;
-	}
-
+	/**
+	 * Getter de los botones
+	 * 
+	 * @return Un arreglo con cada boton
+	 */
 	public JButton[] getBotones() {
 		return botones;
 	}
 
-	public void setBotones(JButton[] botones) {
-		this.botones = botones;
-	}
-
+	/**
+	 * Getter del check para saber el estado en el que esta
+	 * 
+	 * @return El objeto
+	 */
 	public JCheckBox getD_v() {
 		return d_v;
-	}
-
-	public void setD_v(JCheckBox d_v) {
-		this.d_v = d_v;
 	}
 }

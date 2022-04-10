@@ -5,20 +5,44 @@ import java.math.BigInteger;
 import co.edu.unbosque.model.Karatsuba;
 import co.edu.unbosque.model.Matriz;
 import co.edu.unbosque.view.Vista;
-
+/**
+ * 
+ * @author Santiago Flórez
+ * @author Jorge Garcia
+ * Esta clase se encarga del control de la aplicacion y que acciones se deben
+ * realizar al ejecutar el proyecto.
+ *
+ */
 public class Controller {
-
+	
+	/**
+	 * Instacia a la clase Karatsuba
+	 */
 	private static Karatsuba k;
+	/**
+	 * Instacia a la clase Matriz
+	 */
 	private static Matriz m;
+	/**
+	 * Instacia a la clase Vista
+	 */
 	private static Vista v;
 
+	/**
+	 * Controlador de la clase que se encarga de inicializar las instancias de las demas clases de
+	 * los paquetes del proyecto.
+	 */
 	public Controller() {
 		k = new Karatsuba();
 		v = new Vista();
 		m = new Matriz();
 		v.getMenu();
 	}
-
+	
+	/**
+	 * Metodo que se usa como ActionListener para el menu del proyecto.
+	 * @param click String que hace referencia a que boton se le dio click.
+	 */
 	public static void menuListenerMK(String click) {
 		if (click.equals("MK")) {
 			v.getMenu().setVisible(false);
@@ -32,6 +56,9 @@ public class Controller {
 
 	}
 
+	/**
+	 * Metodo que se usa como ActionListener del boton de la interfaz del metodo Karatsuba
+	 */
 	public static void multiplicar() {
 		if (v.getVentK().getActivarK().isSelected()) {
 			try {
@@ -61,7 +88,10 @@ public class Controller {
 			}
 		}
 	}
-
+	
+	/**
+	 * Metodo que se usa como ActionListener del boton de la interfaz de la multiplicacion de matrices
+	 */
 	public static void multiMatriz() {
 		if (v.getVentM().getD_v().isSelected()) {
 			try {
@@ -141,7 +171,11 @@ public class Controller {
 			}
 		}
 	}
-
+	
+	/**
+	 * Metodo que se usa como ActionListener del boton de regreso a la ventana principal
+	 * @param click String que hace referencia a la ventana donde se le dio click al boton regresar
+	 */
 	public static void regresar(String click) {
 		if (click.equals("MK")) {
 			v.getVentK().getEntradas()[0].setText("");

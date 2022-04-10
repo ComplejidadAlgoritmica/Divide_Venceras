@@ -170,7 +170,13 @@ public class Matriz {
 			for (int j1 = 0, j2 = jB; j1 < C.length; j1++, j2++)
 				P[i2][j2] = C[i1][j1];
 	}
-
+	
+	/**
+	 * Metodo que multiplica dos matrices por el metodo tradicional
+	 * @param a Primer matriz
+	 * @param b Segunda matriz
+	 * @return Una nueva matriz con los valores multiplicados
+	 */
 	public static int[][] multiplicacionNormal(int[][] a, int[][] b) {
 		int[][] resul = new int[2][2];
 		int cont;
