@@ -8,7 +8,7 @@ import co.edu.unbosque.controller.Controller;
 
 public class Menu extends JFrame{
 	
-	private JButton[] botones = new JButton[2];
+	private JButton[] botones = new JButton[3];
 	private JLabel titulo = new JLabel();
 	
 	public Menu() {
@@ -29,11 +29,17 @@ public class Menu extends JFrame{
 		
 		botones[0] = new JButton("Multiplicacion Karatsuba");
 		botones[0].setBounds(105, 73, 198, 27);
-		botones[0].addActionListener(e -> Controller.menuListenerMK());
+		botones[0].addActionListener(e -> Controller.menuListenerMK("MK"));
 		getContentPane().add(botones[0]);
 		
 		botones[1] = new JButton("Multiplicacion de Matrices");
-		botones[1].setBounds(99, 140, 210, 27);
+		botones[1].setBounds(99, 123, 210, 27);
+		botones[1].addActionListener(e -> Controller.menuListenerMK("MM"));
 		getContentPane().add(botones[1]);
+		
+		botones[2] = new JButton("Salir");
+		botones[2].setBounds(280, 166, 92, 27);
+		botones[2].addActionListener(e -> Controller.menuListenerMK("S"));
+		getContentPane().add(botones[2]);
 	}
 }

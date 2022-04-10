@@ -51,7 +51,7 @@ public class VentanaK extends JFrame{
 		
 		botonM[1] = new JButton("Regresar");
 		botonM[1].setBounds(465, 312, 115, 27);
-		botonM[1].addActionListener(e -> Controller.regresar());
+		botonM[1].addActionListener(e -> Controller.regresar("MK"));
 		getContentPane().add(botonM[1]);
 		
 		resultado = new JTextArea();
